@@ -17,7 +17,7 @@ import {
   LogOut,
   Sun,
   Moon,
-  Pen
+  Pencil
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -178,7 +178,7 @@ export default function DashboardLayout({
                     <span className="ml-auto h-2 w-2 rounded-full bg-primary"></span>
                   )}
                 </Link>
-                
+
                 <Link
                   href="/dashboard/annotation"
                   className={cn(
@@ -188,7 +188,7 @@ export default function DashboardLayout({
                       : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-gray-100"
                   )}
                 >
-                  <Pen
+                  <Pencil
                     className={cn(
                       "h-5 w-5 shrink-0 transition-colors duration-200",
                       pathname === '/dashboard/annotation'
@@ -197,7 +197,7 @@ export default function DashboardLayout({
                     )}
                     aria-hidden="true"
                   />
-                  Region Annotation
+                  Drought Annotation
 
                   {/* Active indicator */}
                   {pathname === '/dashboard/annotation' && (

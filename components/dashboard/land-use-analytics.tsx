@@ -28,7 +28,7 @@ export function LandUseAnalytics() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const data = await import('@/lib/land-use-data')
+        const data = await import('@/lib/algeria-land-use-data')
         setLandUseData(data.landUseBreakdown)
         setSlopeData(data.slopeData)
         setLoading(false)

@@ -10,7 +10,7 @@ import { DroughtMap } from "@/components/dashboard/drought-map"
 
 export const metadata: Metadata = {
     title: "Drought Dashboard | DroughtFight",
-    description: "DroughtFight drought monitoring dashboard for Autauga County, Alabama",
+    description: "DroughtFight drought monitoring dashboard for Laghouat Wilaya, Algeria",
 }
 
 export default function DroughtDashboardPage() {

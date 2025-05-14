@@ -32,7 +32,8 @@ const Tooltip = dynamic(() => import('react-leaflet').then(mod => mod.Tooltip), 
 })
 
 interface LandUseData {
-  fips: string;
+  code: string;
+  name: string;
   lat: number;
   lon: number;
   elevation: number;
@@ -55,7 +56,7 @@ interface GeoJsonFeature {
     category: string;
     color: string;
     description: string;
-    fips: string;
+    code: string;
     name: string;
   };
   geometry: {
@@ -84,7 +85,7 @@ export function LandUseMap() {
     const loadData = async () => {
       try {
         // In a real app, you would fetch this from an API
-        const data = await import('@/lib/land-use-data')
+        const data = await import('@/lib/algeria-land-use-data')
         setCountyData(data.countyGeoJson)
         setLandUseMarkers(data.landUseMarkers)
         setLandUseData(data.landUseData)
@@ -201,7 +202,7 @@ export function LandUseMap() {
           <div className="absolute top-2 right-2 z-[500]">
             <div className="p-2 rounded-md shadow-md bg-white/95 backdrop-blur-sm border border-gray-200">
               <div className="text-xs font-semibold text-gray-800">
-                Autauga County, AL (FIPS 1001)
+                Laghouat, Algeria (Wilaya Code 03)
               </div>
             </div>
           </div>

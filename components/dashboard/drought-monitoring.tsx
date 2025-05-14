@@ -18,7 +18,7 @@ import {
 } from "recharts"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
-import { landUseData, droughtIndices } from '@/lib/land-use-data'
+import { landUseData, droughtIndices } from '@/lib/algeria-land-use-data'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { InfoIcon } from "lucide-react"
 
@@ -32,7 +32,7 @@ export function DroughtMonitoring() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const data = await import('@/lib/land-use-data')
+        const data = await import('@/lib/algeria-land-use-data')
         setLoadedDroughtIndices(data.droughtIndices)
         setLoading(false)
       } catch (error) {
@@ -82,7 +82,7 @@ export function DroughtMonitoring() {
         <CardTitle className="text-base font-medium">Drought Monitoring</CardTitle>
         <div className="flex items-center space-x-2">
           <div className="flex h-3 w-3 rounded-full bg-orange-500"></div>
-          <span className="text-xs text-muted-foreground">Autauga County, AL</span>
+          <span className="text-xs text-muted-foreground">Laghouat, Algeria</span>
         </div>
       </CardHeader>
       <CardContent>
@@ -149,7 +149,7 @@ export function DroughtMonitoring() {
                 <InfoIcon className="h-3 w-3 mr-1" />
                 <span>Higher values indicate more severe drought conditions</span>
               </div>
-              <div className="text-right">Autauga County, 2024</div>
+              <div className="text-right">Laghouat, Algeria, 2024</div>
             </div>
           </TabsContent>
           

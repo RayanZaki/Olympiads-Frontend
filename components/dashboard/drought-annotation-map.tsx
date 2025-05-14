@@ -8,7 +8,7 @@ import '../../styles/annotation.css'
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
 import { Layers, ZoomIn, ZoomOut, Trash2, Check, X, Eye, EyeOff } from "lucide-react"
-import { landUseData } from '@/lib/land-use-data'
+import { landUseData } from '@/lib/algeria-land-use-data'
 
 // Dynamically import Leaflet components to avoid SSR issues
 const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), {
@@ -40,9 +40,9 @@ const initialAnnotations = [
     level: "severe",
     color: "#f97316", // Orange
     coordinates: [
-      [32.526382, -86.67449],
-      [32.546382, -86.61449],
-      [32.516382, -86.63449]
+      [33.78, 2.85],
+      [33.82, 2.88], 
+      [33.79, 2.91]
     ],
     createdAt: "2024-05-12T15:30:00Z",
     createdBy: "Dr. John Smith"
@@ -53,9 +53,9 @@ const initialAnnotations = [
     level: "moderate",
     color: "#d97706", // Amber
     coordinates: [
-      [32.536382, -86.64449],
-      [32.556382, -86.62449],
-      [32.546382, -86.59449]
+      [33.83, 2.93],
+      [33.85, 2.96],
+      [33.81, 2.97]
     ],
     createdAt: "2024-05-13T10:15:00Z",
     createdBy: "Dr. Maria Johnson"
@@ -68,7 +68,7 @@ export function DroughtAnnotationMap() {
   const { theme } = useTheme()
   const [annotations, setAnnotations] = useState(initialAnnotations)
   const [selectedTool, setSelectedTool] = useState("polygon")
-  const [mapCenter, setMapCenter] = useState([32.536382, -86.64449]) // Autauga County
+  const [mapCenter, setMapCenter] = useState([33.8, 2.9]) // Laghouat, Algeria
   const [showLabels, setShowLabels] = useState(true)
   const [currentDroughtLevel, setCurrentDroughtLevel] = useState("severe")
   

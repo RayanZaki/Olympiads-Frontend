@@ -14,6 +14,7 @@ import {
   Bell,
   FileText,
   Settings,
+  Pencil,
 } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -29,6 +30,11 @@ const sidebarItems = [
     icon: <Cloud className="h-5 w-5" />,
   },
   {
+    title: "Drought Annotation",
+    href: "/dashboard/annotation",
+    icon: <Pencil className="h-5 w-5" />,
+  },
+  {
     title: "Land Use Analysis",
     href: "/dashboard/drought#land-use",
     icon: <Map className="h-5 w-5" />,
@@ -37,8 +43,8 @@ const sidebarItems = [
     title: "Groundwater Analysis",
     href: "/dashboard/drought#groundwater",
     icon: <Droplets className="h-5 w-5" />,
-  }
-]
+  },
+  {
     title: "Piplistans",
     href: "/dashboard/piplistans",
     icon: <Bell className="h-5 w-5" />,
@@ -91,7 +97,7 @@ export function DroughtSidebar({ className }: DroughtSidebarProps) {
               <div className="text-xs bg-orange-500 text-white dark:bg-orange-600 px-2 py-1 rounded-full">Active</div>
             </div>
             <p className="text-xs mt-1 text-muted-foreground">
-              Monitoring Autauga County, Alabama (FIPS 1001). Dashboard shows real-time drought conditions and land use data.
+              Monitoring Laghouat Wilaya, Algeria (Wilaya Code 03). Dashboard shows real-time drought conditions and land use data.
             </p>
           </div>
           

@@ -26,9 +26,9 @@ export function DroughtDashboardHeader() {
       <div>
         <h1 className="text-2xl font-bold tracking-tight text-black dark:text-primary-foreground flex items-center">
           <CloudRain className="h-6 w-6 mr-2 text-orange-500 dark:text-orange-400" />
-          Autauga County Drought Monitor 
+          Laghouat Wilaya Drought Monitor 
         </h1>
-        <p className="text-muted-foreground">FIPS 1001 - Drought forecasting and monitoring dashboard</p>
+        <p className="text-muted-foreground">Wilaya Code 03 - Drought forecasting and monitoring dashboard</p>
       </div>
       <div className="flex items-center gap-2">
         {/* <Button variant="outline" size="sm" className="border-muted/30">

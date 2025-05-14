@@ -31,7 +31,7 @@ export function DroughtAnnotationHeader() {
             <div className="flex items-center gap-2 text-sm">
               <MapPin className="h-4 w-4 text-orange-500" />
               <span className="font-medium">Current Region:</span>
-              <span>Autauga County, Alabama (FIPS 1001)</span>
+              <span>Laghouat, Algeria (Wilaya Code 03)</span>
             </div>
             
             <div className="flex gap-2">

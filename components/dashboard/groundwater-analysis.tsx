@@ -22,7 +22,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
-import { landUseData, slopeData, aspectData } from '@/lib/land-use-data'
+import { landUseData, slopeData, aspectData } from '@/lib/algeria-land-use-data'
 import { InfoIcon, Droplets } from "lucide-react"
 
 // Generate groundwater level data based on county characteristics
@@ -113,7 +113,7 @@ export function GroundwaterAnalysis() {
           Groundwater Analysis
         </CardTitle>
         <div className="flex items-center space-x-2">
-          <span className="text-xs text-muted-foreground">Autauga County, AL</span>
+          <span className="text-xs text-muted-foreground">Laghouat, Algeria</span>
         </div>
       </CardHeader>
       <CardContent>
