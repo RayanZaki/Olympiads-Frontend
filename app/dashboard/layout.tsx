@@ -16,7 +16,8 @@ import {
   X,
   LogOut,
   Sun,
-  Moon
+  Moon,
+  Pen
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -174,6 +175,32 @@ export default function DashboardLayout({
 
                   {/* Active indicator */}
                   {pathname === '/dashboard/drought' && (
+                    <span className="ml-auto h-2 w-2 rounded-full bg-primary"></span>
+                  )}
+                </Link>
+                
+                <Link
+                  href="/dashboard/annotation"
+                  className={cn(
+                    "group flex items-center gap-x-3 rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200",
+                    pathname === '/dashboard/annotation'
+                      ? "bg-primary/10 text-primary dark:bg-primary/20"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-gray-100"
+                  )}
+                >
+                  <Pen
+                    className={cn(
+                      "h-5 w-5 shrink-0 transition-colors duration-200",
+                      pathname === '/dashboard/annotation'
+                        ? "text-primary"
+                        : "text-gray-400 dark:text-gray-500 group-hover:text-primary/70"
+                    )}
+                    aria-hidden="true"
+                  />
+                  Region Annotation
+
+                  {/* Active indicator */}
+                  {pathname === '/dashboard/annotation' && (
                     <span className="ml-auto h-2 w-2 rounded-full bg-primary"></span>
                   )}
                 </Link>

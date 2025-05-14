@@ -1,0 +1,134 @@
+/* Drought annotation map styles */
+
+/* Annotation polygon styles */
+.drought-annotation-normal {
+  fill: hsl(var(--success)) !important;
+  fill-opacity: 0.3 !important;
+  stroke: hsl(var(--success)) !important;
+  stroke-width: 2 !important;
+  stroke-opacity: 0.8 !important;
+}
+
+.drought-annotation-abnormal {
+  fill: hsl(var(--warning)) !important;
+  fill-opacity: 0.3 !important;
+  stroke: hsl(var(--warning)) !important;
+  stroke-width: 2 !important;
+  stroke-opacity: 0.8 !important;
+}
+
+.drought-annotation-moderate {
+  fill: hsl(var(--drought-moderate)) !important;
+  fill-opacity: 0.3 !important;
+  stroke: hsl(var(--drought-moderate)) !important;
+  stroke-width: 2 !important;
+  stroke-opacity: 0.8 !important;
+}
+
+.drought-annotation-severe {
+  fill: hsl(var(--drought-severe)) !important;
+  fill-opacity: 0.3 !important;
+  stroke: hsl(var(--drought-severe)) !important;
+  stroke-width: 2 !important;
+  stroke-opacity: 0.8 !important;
+}
+
+/* Leaflet draw styling customizations */
+.leaflet-draw-toolbar a {
+  background-color: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px !important;
+  margin-bottom: 5px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-draw-toolbar a:hover {
+  background-color: #f7f7f7 !important;
+}
+
+.leaflet-draw-actions a {
+  background-color: white !important;
+  color: #333 !important;
+  font-family: var(--font-sans) !important;
+  font-size: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.leaflet-draw-actions a:hover {
+  background-color: #f7f7f7 !important;
+  color: #000 !important;
+}
+
+/* Annotation labels */
+.annotation-label {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 4px !important;
+  padding: 4px 8px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  pointer-events: none !important;
+}
+
+/* Annotation selection effects */
+.annotation-selected {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    stroke-opacity: 0.8;
+  }
+  50% {
+    stroke-opacity: 1;
+    stroke-width: 3px;
+  }
+  100% {
+    stroke-opacity: 0.8;
+  }
+}
+
+/* Dark mode adaptations */
+.dark .leaflet-draw-toolbar a {
+  background-color: #1e1e1e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .leaflet-draw-toolbar a:hover {
+  background-color: #2e2e2e !important;
+}
+
+.dark .leaflet-draw-actions a {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .leaflet-draw-actions a:hover {
+  background-color: #2e2e2e !important;
+  color: #ffffff !important;
+}
+
+/* Annotation toolbar styles */
+.annotation-toolbar {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dark .annotation-toolbar {
+  background-color: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Help tooltip styles */
+.annotation-help-tooltip {
+  max-width: 300px;
+  line-height: 1.4;
+}

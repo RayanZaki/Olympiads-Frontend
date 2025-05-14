@@ -24,21 +24,21 @@ export function DroughtDashboardHeader() {
   return (
     <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-secondary/5 backdrop-blur-sm rounded-xl p-4 border border-muted/30">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight text-primary-foreground flex items-center">
+        <h1 className="text-2xl font-bold tracking-tight text-black dark:text-primary-foreground flex items-center">
           <CloudRain className="h-6 w-6 mr-2 text-orange-500 dark:text-orange-400" />
-          Autauga County Drought Monitor
+          Autauga County Drought Monitor 
         </h1>
         <p className="text-muted-foreground">FIPS 1001 - Drought forecasting and monitoring dashboard</p>
       </div>
       <div className="flex items-center gap-2">
-        <Button variant="outline" size="sm" className="border-muted/30">
+        {/* <Button variant="outline" size="sm" className="border-muted/30">
           <Filter className="mr-2 h-4 w-4" />
           Filter
-        </Button>
-        <Button variant="outline" size="sm" className="border-muted/30">
+        </Button> */}
+        {/* <Button variant="outline" size="sm" className="border-muted/30">
           <Download className="mr-2 h-4 w-4" />
           Export Data
-        </Button>
+        </Button> */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" size="icon" className="rounded-full border-muted/30">

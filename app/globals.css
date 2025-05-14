@@ -4,6 +4,7 @@
 
 @import '../styles/dark-mode.css';
 @import '../styles/orange-theme.css';
+@import '../styles/annotation.css';
 
 @layer base {
   :root {
