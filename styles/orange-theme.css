@@ -1,0 +1,101 @@
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+
+  /* Updated theme colors - orange and white for light mode */
+  --primary: 24 95% 55%;   /* Orange */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 30 95% 50%; /* Amber */
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 24 90% 60%;    /* Light orange */
+  --accent-foreground: 0 0% 100%;
+
+  --muted: 24 10% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 24 95% 55%;      /* Orange */
+
+  --radius: 0.75rem;
+
+  /* Custom sidebar colors */
+  --sidebar-background: 24 10% 98%;
+  --sidebar-foreground: 222.2 84% 4.9%;
+  --sidebar-primary: 24 95% 55%;  /* Orange */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 24 10% 94%;
+  --sidebar-accent-foreground: 222.2 84% 4.9%;
+  --sidebar-border: 24 10% 90%;
+  --sidebar-ring: 24 95% 55%;     /* Orange */
+
+  /* Success, warning colors */
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 100%;
+
+  --warning: 36 100% 50%;
+  --warning-foreground: 0 0% 0%;
+  
+  /* Drought colors */
+  --drought-low: 220 13% 50%;      /* Gray */
+  --drought-moderate: 36 84% 45%;   /* Amber */
+  --drought-severe: 24 95% 50%;     /* Orange */
+}
+
+.dark {
+  --background: 0 0% 0%;            /* Pure black */
+  --foreground: 210 40% 98%;
+
+  /* Updated theme colors - black with orange accents */
+  --primary: 24 95% 55%;   /* Orange */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 220 13% 28%;
+  --secondary-foreground: 210 40% 98%;
+
+  --accent: 24 90% 50%;    /* Orange */
+  --accent-foreground: 0 0% 100%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --card: 0 0% 5%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 0 0% 5%;
+  --popover-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 24 95% 55%;      /* Orange */
+
+  /* Custom sidebar colors - dark mode */
+  --sidebar-background: 0 0% 7%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 24 95% 55%;    /* Orange */
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 217.2 32.6% 17.5%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 217.2 32.6% 17.5%;
+  --sidebar-ring: 24 95% 55%;       /* Orange */
+
+  /* Drought colors - dark mode */
+  --drought-low: 220 13% 60%;       /* Lighter Gray for visibility */
+  --drought-moderate: 36 84% 50%;   /* Amber */
+  --drought-severe: 24 95% 55%;     /* Orange */
+}

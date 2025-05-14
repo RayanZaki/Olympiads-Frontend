@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.agriscan.app/v1';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.DroughtFight.app/v1';
 
 interface ApiResponse<T> {
   success: boolean;

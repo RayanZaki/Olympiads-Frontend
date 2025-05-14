@@ -13,7 +13,7 @@ import { RefreshCw } from "lucide-react"
 
 // Metadata can't be exported from client components
 // export const metadata: Metadata = {
-//   title: "Alerts | AgriScan",
+//   title: "Alerts | DroughtFight",
 //   description: "Manage and send alerts to farmers",
 // }
 

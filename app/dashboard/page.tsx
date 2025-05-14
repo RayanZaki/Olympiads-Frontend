@@ -1,24 +1,16 @@
 import type { Metadata } from "next"
-import ProtectedRoute from "@/components/auth/ProtectedRoute" // Import ProtectedRoute
-import { DashboardHeader } from "@/components/dashboard/header"
-import { DashboardStats } from "@/components/dashboard/stats"
-import { RecentReports } from "@/components/dashboard/recent-reports"
-import { DashboardCharts } from "@/components/dashboard/dashboard-charts"
+import Link from "next/link"
+import { redirect } from 'next/navigation'
+import ProtectedRoute from "@/components/auth/ProtectedRoute"
 
 export const metadata: Metadata = {
-  title: "Dashboard | AgriScan",
-  description: "AgriScan dashboard overview",
+  title: "Dashboard | DroughtFight",
+  description: "DroughtFight drought monitoring dashboard",
 }
 
 export default function DashboardPage() {
-  return (
-    <ProtectedRoute> {/* Wrap content with ProtectedRoute */}
-      <div className="flex flex-col gap-6 p-6">
-        <DashboardHeader />
-        <DashboardStats />
-        <DashboardCharts />
-        <RecentReports />
-      </div>
-    </ProtectedRoute>
-  )
+  // Redirect directly to the drought dashboard
+  redirect('/dashboard/drought')
+  
+  return null
 }

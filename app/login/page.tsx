@@ -80,7 +80,7 @@ export default function LoginPage() {
                     </div>
                   </div>
                   <h3 className="text-xl font-bold">Welcome Back</h3>
-                  <p className="text-sm text-white/80">Sign in to access your AgriScan dashboard</p>
+                  <p className="text-sm text-white/80">Sign in to access your DroughtFight dashboard</p>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function LoginPage() {
               </div>
               
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white text-center md:text-left">
-                Sign in to AgriScan
+                Sign in to DroughtFight
               </h2>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
                 Enter your credentials to access your account

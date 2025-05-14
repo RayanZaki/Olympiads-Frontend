@@ -1,6 +1,6 @@
-# AgriScan - Agricultural Monitoring Dashboard
+# DroughtFight - Agricultural Monitoring Dashboard
 
-AgriScan is a web application designed to help agricultural inspectors monitor crop health, track disease outbreaks, manage alerts, and visualize data geographically.
+DroughtFight is a web application designed to help agricultural inspectors monitor crop health, track disease outbreaks, manage alerts, and visualize data geographically.
 
 ## Screenshots
 

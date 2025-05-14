@@ -8,7 +8,7 @@ import { MapView } from "@/components/dashboard/map/view"
 // import L from "leaflet"
 
 export const metadata: Metadata = {
-  title: "Geospatial Map | AgriScan",
+  title: "Geospatial Map | DroughtFight",
   description: "Interactive map of agricultural health data",
 }
 

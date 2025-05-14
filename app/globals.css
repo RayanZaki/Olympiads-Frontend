@@ -2,28 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @import '../styles/dark-mode.css';
+@import '../styles/orange-theme.css';
 
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    /* Custom AgriScan theme colors */
-    --primary: 142 76% 36%;
-    /* Vibrant green */
+    /* Updated theme colors - orange and white for light mode */
+    --primary: 24 95% 55%;   /* Orange */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 93% 47%;
-    /* Warm yellow */
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 30 95% 50%; /* Amber */
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 210 100% 52%;
-    /* Water blue */
+    --accent: 24 90% 60%;    /* Light orange */
     --accent-foreground: 0 0% 100%;
 
-    --muted: 142 33% 96%;
+    --muted: 24 10% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
     --card: 0 0% 100%;
@@ -37,40 +34,45 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 142 76% 36%;
+    --ring: 24 95% 55%;      /* Orange */
 
     --radius: 0.75rem;
 
     /* Custom sidebar colors */
-    --sidebar-background: 142 33% 98%;
+    --sidebar-background: 24 10% 98%;
     --sidebar-foreground: 222.2 84% 4.9%;
-    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary: 24 95% 55%;  /* Orange */
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 142 33% 94%;
+    --sidebar-accent: 24 10% 94%;
     --sidebar-accent-foreground: 222.2 84% 4.9%;
-    --sidebar-border: 142 33% 90%;
-    --sidebar-ring: 142 76% 36%;
+    --sidebar-border: 24 10% 90%;
+    --sidebar-ring: 24 95% 55%;     /* Orange */
 
     /* Success, warning colors */
     --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
 
-    --warning: 45 93% 47%;
-    --warning-foreground: 222.2 47.4% 11.2%;
+    --warning: 36 100% 50%;
+    --warning-foreground: 0 0% 0%;
+    
+    /* Drought colors */
+    --drought-low: 220 13% 50%;      /* Gray */
+    --drought-moderate: 36 84% 45%;   /* Amber */
+    --drought-severe: 24 95% 50%;     /* Orange */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 84% 4.9%;     /* Dark gray/black */
     --foreground: 210 40% 98%;
 
-    /* Custom AgriScan theme colors - dark mode */
-    --primary: 142 76% 36%;
+    /* Updated theme colors - gray/black for dark mode with orange accents */
+    --primary: 24 95% 55%;   /* Orange */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 13% 28%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
 
-    --accent: 210 100% 52%;
+    --accent: 24 90% 50%;    /* Orange */
     --accent-foreground: 0 0% 100%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -87,17 +89,17 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 142 76% 36%;
+    --ring: 24 95% 55%;      /* Orange */
 
     /* Custom sidebar colors - dark mode */
-    --sidebar-background: 222.2 84% 9.9%;
+    --sidebar-background: 222.2 84% 7.5%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary: 24 95% 55%;    /* Orange */
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 217.2 32.6% 17.5%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
-    --sidebar-ring: 142 76% 36%;
+    --sidebar-ring: 24 95% 55%;       /* Orange */
 
     /* Success, warning colors */
     --success: 142 76% 36%;

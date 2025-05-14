@@ -30,6 +30,11 @@ module.exports = {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        drought: {
+          low: "hsl(var(--drought-low))",
+          moderate: "hsl(var(--drought-moderate))",
+          severe: "hsl(var(--drought-severe))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",

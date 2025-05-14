@@ -8,8 +8,8 @@ import './styles.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "AgriScan Dashboard",
-  description: "AI-driven agricultural health monitoring platform",
+  title: "DroughtFight Dashboard",
+  description: "AI-driven drought monitoring and analysis platform",
   generator: 'v0.dev'
 }
 

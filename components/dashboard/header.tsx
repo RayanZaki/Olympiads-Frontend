@@ -27,7 +27,7 @@ export function DashboardHeader() {
         <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
           Dashboard
         </h1>
-        <p className="text-muted-foreground">Welcome to the AgriScan inspector dashboard</p>
+        <p className="text-muted-foreground">Welcome to the DroughtFight inspector dashboard</p>
       </div>
       <div className="flex items-center gap-2">
         <Button

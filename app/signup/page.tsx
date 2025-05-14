@@ -151,7 +151,7 @@ export default function SignupPage() {
                       <UserPlus className="h-6 w-6 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold">Join AgriScan</h3>
+                  <h3 className="text-xl font-bold">Join DroughtFight</h3>
                   <p className="text-sm text-white/80">Create an account to manage your farm data efficiently</p>
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default function SignupPage() {
                 Create an Account
               </h2>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 text-center md:text-left">
-                Join AgriScan today and start managing your crops better
+                Join DroughtFight today and start managing your crops better
               </p>
               
               {error && (

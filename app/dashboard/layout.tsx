@@ -82,18 +82,9 @@ export default function DashboardLayout({
     }
   }
 
-  const navigation = [
-    { name: 'Dashboard', href: '/dashboard', icon: Home },
-    { name: 'Reports', href: '/dashboard/reports', icon: FileText },
-    { name: 'Map View', href: '/dashboard/map', icon: MapPin },
-    { name: 'Alerts', href: '/dashboard/alerts', icon: Bell },
-    // { name: 'Farmers', href: '/dashboard/farmers', icon: Users },
-    // { name: 'Analytics', href: '/dashboard/analytics', icon: BarChart3 },
-  ]
-
   return (
     <AuthProvider>
-      <div className="w-full flex min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden" data-dashboard="true">
+      <div className="w-full flex min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-black dark:to-black relative overflow-hidden" data-dashboard="true">
         {/* Background patterns */}
         <div className="pattern-grid absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none"></div>
         <div className="pattern-dots absolute inset-0 opacity-10 pointer-events-none"></div>
@@ -108,7 +99,7 @@ export default function DashboardLayout({
           "fixed inset-y-0 z-50 flex w-72 flex-col transition-transform duration-300 lg:static lg:translate-x-0",
           mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         )}>
-          <div className="flex flex-col h-full overflow-y-auto bg-white dark:bg-gray-900 shadow-xl rounded-r-3xl border-r border-gray-100 dark:border-gray-800">
+          <div className="flex flex-col h-full overflow-y-auto bg-white dark:bg-black shadow-xl rounded-r-3xl border-r border-gray-100 dark:border-gray-800">
             {/* Mobile close button */}
             <div className="absolute top-4 right-4 lg:hidden">
               <Button
@@ -124,12 +115,12 @@ export default function DashboardLayout({
 
             {/* Logo */}
             <div className="flex h-16 items-center justify-between px-6 py-4">
-              <Link href="/dashboard" className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-green-600 shadow-md">
+              <Link href="/dashboard/drought" className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-orange-600 shadow-md">
                   <Leaf className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-                  AgriScan
+                <span className="text-xl font-bold bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
+                  DroughtFight
                 </span>
               </Link>
 
@@ -161,64 +152,36 @@ export default function DashboardLayout({
             {/* Navigation */}
             <nav className="flex-1 px-3 py-4">
               <div className="space-y-1">
-                {navigation.map((item) => {
-                  const isActive = pathname === item.href
-                  return (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={cn(
-                        "group flex items-center gap-x-3 rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200",
-                        isActive
-                          ? "bg-primary/10 text-primary dark:bg-primary/20"
-                          : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-gray-100"
-                      )}
-                    >
-                      <item.icon
-                        className={cn(
-                          "h-5 w-5 shrink-0 transition-colors duration-200",
-                          isActive
-                            ? "text-primary"
-                            : "text-gray-400 dark:text-gray-500 group-hover:text-primary/70"
-                        )}
-                        aria-hidden="true"
-                      />
-                      {item.name}
+                <Link
+                  href="/dashboard/drought"
+                  className={cn(
+                    "group flex items-center gap-x-3 rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200",
+                    pathname === '/dashboard/drought'
+                      ? "bg-primary/10 text-primary dark:bg-primary/20"
+                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-gray-100"
+                  )}
+                >
+                  <Leaf
+                    className={cn(
+                      "h-5 w-5 shrink-0 transition-colors duration-200",
+                      pathname === '/dashboard/drought'
+                        ? "text-primary"
+                        : "text-gray-400 dark:text-gray-500 group-hover:text-primary/70"
+                    )}
+                    aria-hidden="true"
+                  />
+                  Drought Monitor
 
-                      {/* Active indicator */}
-                      {isActive && (
-                        <span className="ml-auto h-2 w-2 rounded-full bg-primary"></span>
-                      )}
-                    </Link>
-                  )
-                })}
+                  {/* Active indicator */}
+                  {pathname === '/dashboard/drought' && (
+                    <span className="ml-auto h-2 w-2 rounded-full bg-primary"></span>
+                  )}
+                </Link>
               </div>
             </nav>
 
             <div className="px-3 py-4 mt-auto">
               <Separator className="mb-4 bg-gray-100 dark:bg-gray-800" />
-
-              {/* Settings link */}
-              <Link
-                href="/dashboard/settings"
-                className={cn(
-                  "group flex items-center gap-x-3 rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200",
-                  pathname === '/dashboard/settings'
-                    ? "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-gray-100"
-                )}
-              >
-                <Settings
-                  className={cn(
-                    "h-5 w-5 shrink-0 transition-colors duration-200",
-                    pathname === '/dashboard/settings'
-                      ? "text-gray-900 dark:text-gray-100"
-                      : "text-gray-400 dark:text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-300"
-                  )}
-                  aria-hidden="true"
-                />
-                Settings
-              </Link>
 
               {/* Logout button */}
               <button
@@ -253,7 +216,7 @@ export default function DashboardLayout({
             <div className="flex flex-shrink-0 items-center gap-x-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-green-500 to-green-600">
                 <span className="text-lg font-semibold bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-                  AgriScan
+                  DroughtFight
                 </span>
               </div>
 

@@ -1,0 +1,130 @@
+/* Leaflet fixes for Next.js and theme support for drought visualization */
+
+/* Fix for Leaflet icons */
+.leaflet-default-icon-path {
+  background-image: url(https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png) !important;
+}
+
+/* Light theme for Leaflet controls */
+.leaflet-control-container .leaflet-control {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: #374151 !important;
+  border-color: rgba(209, 213, 219, 0.5) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+/* Dark theme for Leaflet controls - keep light theme styling for better contrast with dark background */
+.dark .leaflet-control-container .leaflet-control {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #374151 !important;
+  border-color: rgba(209, 213, 219, 0.5) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+/* Light theme map background */
+.leaflet-container {
+  background: #ffffff !important;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Keep map background light even in dark mode and add subtle border */
+.dark .leaflet-container {
+  background: #ffffff !important;
+  filter: none;
+  border: 1px solid rgba(75, 85, 99, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+.leaflet-tile-pane {
+  opacity: 0.95;
+}
+
+/* Slightly adjust map tiles in dark mode for better contrast */
+.dark .leaflet-tile-pane {
+  opacity: 0.9;
+  filter: contrast(0.95) brightness(1.05);
+}
+
+/* Custom drought visualization styles - using CSS variables for theme support */
+.drought-low {
+  fill: hsl(var(--drought-low));
+  fill-opacity: 0.7;
+  stroke: hsl(var(--drought-low));
+  stroke-width: 1;
+  stroke-opacity: 0.9;
+}
+
+.drought-moderate {
+  fill: hsl(var(--drought-moderate));
+  fill-opacity: 0.75;
+  stroke: hsl(var(--drought-moderate));
+  stroke-width: 1;
+  stroke-opacity: 0.95;
+}
+
+.drought-severe {
+  fill: hsl(var(--drought-severe));
+  fill-opacity: 0.8;
+  stroke: hsl(var(--drought-severe));
+  stroke-width: 1.5;
+  stroke-opacity: 1;
+}
+
+/* Leaflet popup theme support */
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #374151 !important;
+  border-radius: var(--radius) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15) !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+}
+
+/* Dark mode tooltip adjustments */
+.dark .leaflet-tooltip {
+  background-color: #ffffff !important;
+  color: #374151 !important;
+  border-color: rgba(209, 213, 219, 0.8) !important;
+}
+
+/* Map legend theming */
+.map-legend {
+  background: hsl(var(--background)) !important;
+  color: hsl(var(--foreground)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
+  padding: 8px !important;
+}
+
+.map-legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.map-legend-color {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 2px;
+}
+
+/* Tooltip styling for consistency in both light and dark modes */
+.custom-tooltip {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.leaflet-tooltip {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  background-color: white !important;
+  color: #374151 !important;
+  border-color: rgba(209, 213, 219, 0.8) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
